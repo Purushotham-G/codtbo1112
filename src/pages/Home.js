@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <div>
-        {/* jhjgjg{firstApiLoading.toString()} */}
+        jhjgjg{firstApiLoading.toString()}
         <h1>{firstApiData?.title}</h1>
       </div>
     </>

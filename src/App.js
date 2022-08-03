@@ -8,6 +8,7 @@ import Profile from "./Component/Profile";
 import DashBoard from "./Component/DashBoard";
 import DashBoard1 from "./Component/DashBoard1";
 import PopupScreen from "./Component/PopupScreen";
+import NewPage from "./pages/NewPage";
 
 function App() {
   const routes = (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/dashboard1" element={<DashBoard1 />} />
         <Route path="/popup" element={<PopupScreen />} />
+        <Route path="/newPage" element={<NewPage />} />
       </Routes>
     </BrowserRouter>
   );
