@@ -7,15 +7,16 @@ import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import DiscountOutlinedIcon from "@mui/icons-material/DiscountOutlined";
 import ReviewsOutlinedIcon from "@mui/icons-material/ReviewsOutlined";
+import { Link } from "react-router-dom";
 
-function DashBoard({ children }) {
+function DashBoard({ children, active }) {
   const data = [
     {
       icon: (
         <PermIdentityOutlinedIcon sx={{ color: "#b8b8b8", fontSize: "18px" }} />
       ),
       label: "ACCOUNT",
-      items: [{ label: "Profile", link: "" }],
+      items: [{ label: "Profile", link: "/profile" }],
     },
     {
       icon: <FeedOutlinedIcon sx={{ color: "#b8b8b8", fontSize: "18px" }} />,
@@ -29,7 +30,7 @@ function DashBoard({ children }) {
         />
       ),
       label: "WALLET",
-      items: [{ label: "CostBo Wallet", link: "" }],
+      items: [{ label: "CostBo Wallet", link: "/newPage" }],
     },
     {
       icon: (
@@ -67,9 +68,7 @@ function DashBoard({ children }) {
               My Dashboard{" "}
             </Typography>
           </Box>
-
           {/* profile cart */}
-
           <Box>
             <Typography
               sx={{ color: "#000", fontSize: "20px", fontWeight: "600", my: 2 }}
@@ -133,8 +132,14 @@ function DashBoard({ children }) {
                                 sx={{
                                   fontSize: "14px",
                                   fontWeight: "500",
-                                  color: "#000",
+                                  color:
+                                    active == data?.label
+                                      ? "#00ab6b"
+                                      : "#000",
+                                  textDecoration: "none",
                                 }}
+                                component={Link}
+                                to={data?.link}
                               >
                                 {data?.label}
                               </Typography>

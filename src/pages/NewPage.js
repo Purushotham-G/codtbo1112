@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import DashBoard from "../Component/DashBoard";
+import MyWallet from "../Component/MyWallet";
 
 function NewPage() {
   return (
-    <div>NewPage</div>
-  )
+    <>
+      <DashBoard active="CostBo Wallet">
+        <MyWallet />
+      </DashBoard>
+    </>
+  );
 }
 
-export default NewPage
+export default NewPage;

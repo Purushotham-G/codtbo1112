@@ -7,9 +7,9 @@ import MyWallet from "./MyWallet";
 function Profile() {
   return (
     <>
-      <DashBoard>
-        {/* <DashBoard1 /> */}
-        <MyWallet />
+      <DashBoard active="Profile">
+        <DashBoard1 />
+        {/* <MyWallet /> */}
       </DashBoard>
     </>
   );

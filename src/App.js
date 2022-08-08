@@ -9,6 +9,8 @@ import DashBoard from "./Component/DashBoard";
 import DashBoard1 from "./Component/DashBoard1";
 import PopupScreen from "./Component/PopupScreen";
 import NewPage from "./pages/NewPage";
+import SocialTrending from "./pages/SocialTrending";
+import Social from "./pages/Social";
 
 function App() {
   const routes = (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/dashboard1" element={<DashBoard1 />} />
         <Route path="/popup" element={<PopupScreen />} />
         <Route path="/newPage" element={<NewPage />} />
+        <Route path="/trending" element={<SocialTrending />} />
+        <Route path="parChild" element={<Social />} />
       </Routes>
     </BrowserRouter>
   );

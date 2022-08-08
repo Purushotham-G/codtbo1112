@@ -28,8 +28,14 @@ function MyWallet() {
   }, []);
 
   useEffect(() => {
-    console.log("fldhgfuldgfb", secondApiData);
+    getBusinessInfo();
   }, [secondApiData]);
+
+  const getBusinessInfo = async () => {
+    if (secondApiData?.length > 0) {
+      
+    }
+  };
 
   const data1 = [
     {
